@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>STUDENT REGISTRATION FORM</title>
+    </head>
+    <body>
+        <h1>Student Registration Form</h1>
+        <form>
+            <!--Name-->
+            <label for="name">Full Name: </label>
+            <input type="text" id="name" name="name" placeholder="eg:shiva" required>
+            <br><br>
+            <!--Email-->
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" placeholder="eg:shiva.12@gmail.com" required>
+            <br><br>
+            <!--Phone Number-->
+            <label for="phone">Phone number: </label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Enter a 10-digit phone number" required>
+            <br><br>
+            <!--AGE-->
+            <label for="age">Age: </label>
+            <input type="number" id="age" name="age" min="16" max="60" required>
+            <br><br>
+            <!--Date of Birth-->
+            <label for="dob">Date of birth: </label>
+            <input type="date" id="dob" name="dob" required>
+            <br><br>
+            <!--Submit Button-->
+            <input type="submit" value="Register">
+            <br><br>
+        </form>
+    </body>
+</html>
