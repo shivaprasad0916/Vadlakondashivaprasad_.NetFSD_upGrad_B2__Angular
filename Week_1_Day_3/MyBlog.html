@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background-color: white;
+        }
+
+        header {
+            background-color: rgba(0, 74, 139, 0.514);
+            color: rgb(89, 43, 43);
+            text-align: center;
+            padding: 15px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: rgb(172, 124, 124);
+            padding: 15px;
+            border: 1px solid rgb(20, 14, 14);
+        }
+
+        .card h3 {
+            margin-bottom: 5px;
+        }
+
+        .card p {
+            font-size: auto;
+        }
+
+        button {
+            background-color: rgb(36, 201, 39);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>My Simple Blog</h2>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+            <h3>HTML Basics</h3>
+            <p>This blog explains basic structure of HTML.</p>
+            <button>Read More</button>
+        </div>
+
+        <div class="card">
+            <h3>CSS Styling</h3>
+            <p>This blog explains how to style using CSS.</p>
+            <button>Read More</button>
+        </div>
+
+        <div class="card">
+            <h3>DotNet FullStack</h3>
+            <p>This blog explains how media queries work.</p>
+            <button>Read More</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
