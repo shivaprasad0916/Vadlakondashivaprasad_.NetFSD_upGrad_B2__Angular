@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Info Display</title>
+</head>
+<body>
+
+    <h2>User Information</h2>
+
+    <!-- Button -->
+    <button onclick="handleDisplay()">Show User Info</button>
+
+    <!-- Paragraphs to Display Data -->
+    <p id="userName"></p>
+    <p id="userAge"></p>
+    <p id="userCity"></p>
+    <p id="userCourse"></p>
+    <p id="userEducation"></p>
+    <p id="userColleageName"></p>
+
+    <script>
+        // Function that accepts an object as parameter
+        function displayUserInfo(userObj) {
+
+            // Accessing object properties using dot notation
+            document.getElementById("userName").innerHTML = "Name: " + userObj.name;
+            document.getElementById("userAge").innerHTML = "Age: " + userObj.age;
+            document.getElementById("userCity").innerHTML = "City: " + userObj.city;
+            document.getElementById("userCourse").innerHTML = "Course: " + userObj.course;
+            document.getElementById("userEducation").innerHTML = "Education: " + userObj.education;
+            document.getElementById("userColleageName").innerHTML = "ColleageName: " + userObj.colleageName;
+        }
+
+        // Function triggered by button click
+        function handleDisplay() {
+
+            // Object created inside function (not global)
+            var user = {
+                name: "Shiva Prasad",
+                age: 23,
+                city: "Mandamarri, Mancherial, Telanagana",
+                course: "DotNet_FSD_Angular",
+                education: "Bachelors of Technology In CSE (AI & ML)",
+                colleageName: "Marri Laxman Reddy Institute of Technology and Management",
+            };
+
+            displayUserInfo(user);
+        }
+    </script>
+
+</body>
+</html>

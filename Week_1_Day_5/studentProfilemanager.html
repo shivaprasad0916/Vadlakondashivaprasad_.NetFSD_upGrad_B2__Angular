@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile Manager</title>
+    <style>
+        #studentProfile {
+            border: 2px solid #333;
+            padding: 15px;
+            width: 250px;
+            margin-top: 15px;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Profile Manager</h2>
+
+    <button id="showProfileBtn">Show Profile</button>
+    <button id="updateMarksBtn">Update Marks (+5)</button>
+
+    <!-- Styled div to display student info -->
+    <div id="studentProfile"></div>
+
+    <script>
+        //  Global student object (Global Scope)
+        var student = {
+            name: "Shiva Prasad",
+            rollNo: 10,
+            marks: 80,
+        };
+
+        // Function to display student details
+        function updateStudentProfile(studentObj) {
+
+            var profileDiv = document.getElementById("studentProfile");
+
+            profileDiv.innerHTML =
+                "<h3>Student Details</h3>" +
+                "<p>Name: " + studentObj.name + "</p>" +
+                "<p>Roll No: " + studentObj.rollNo + "</p>" +
+                "<p>Marks: " + studentObj.marks + "</p>";
+        }
+
+        // Function to update marks and refresh display
+        function updateMarks(newMarks) {
+
+            // Update object value using parameter
+            student.marks = newMarks;
+
+            // Refresh UI without page reload
+            updateStudentProfile(student);
+        }
+
+        // Event Listeners (No inline JS)
+        document.getElementById("showProfileBtn").addEventListener("click", function() {
+            updateStudentProfile(student);
+        });
+
+        document.getElementById("updateMarksBtn").addEventListener("click", function() {
+            var updatedValue = student.marks + 5;
+            updateMarks(updatedValue);
+        });
+
+    </script>
+
+</body>
+</html>
