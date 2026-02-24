@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Marks Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            text-align: center;
+            padding: 40px;
+        }
+        .card {
+            background: rgb(153, 116, 116);
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 0 5px 15px rgba(57, 20, 35, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        button {
+            padding: 10px 15px;
+            margin-top: 15px;
+            border: none;
+            background-color: #3b8330;
+            color: rgb(13, 9, 9);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: left;
+            font-weight: bold;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Student Marks Analyzer</h2>
+        <button onclick="analyzeMarks()">Analyze Marks</button>
+        <div class="result" id="output"></div>
+    </div>
+    <script type="module">
+        // Step 1: Store marks
+        const studentMarks = [76, 87, 92, 69, 78];
+        // Step 2: Arrow function to calculate total using reduce()
+        const calculateTotal = (marks) =>
+            marks.reduce((sum, mark) => sum + mark, 0);
+        // Step 3: Arrow function to calculate average
+        const calculateAverage = (total, count) => total / count;
+        // Step 4: Determine pass/fail
+        const getResult = (average) =>
+            average >= 40 ? "PASS " : "FAIL ";
+        // Step 5: Using map() (Example: Copying marks)
+        const processMarks = (marks) =>
+            marks.map(mark => mark);
+        // Main Function
+        const analyzeMarks = () => {
+            const processedMarks = processMarks(studentMarks);
+            const totalMarks = calculateTotal(processedMarks);
+            const averageMarks = calculateAverage(totalMarks, processedMarks.length);
+            const result = getResult(averageMarks);
+            const report = `Marks: ${processedMarks.join(", ")} <br>
+                Total Marks: ${totalMarks} <br>
+                Average Marks: ${averageMarks.toFixed(2)} <br>
+                Final Result: ${result}`;
+            document.getElementById("output").innerHTML = report;
+        };
+        // Make function available to button
+        window.analyzeMarks = analyzeMarks;
+    </script>
+</body>
+</html>

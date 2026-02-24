@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Cart Summary</title>
+</head>
+<body>
+    <h2>Open Console to View Invoice</h2>
+
+    <script type="module">
+        
+        /***********************
+         * calculator module
+         ***********************/
+        
+        // Exported-style function (modular section)
+        const calculateTotal = (products) => {
+            return products.reduce((total, product) => {
+                return total + product.price * product.quantity;
+            }, 0);
+        };
+
+
+        /***********************
+         * cart module
+         ***********************/
+
+        // Step 1: Array of product objects
+        const cartItems = [
+            { name: "Laptop", price: 50000, quantity: 1 },
+            { name: "Mouse", price: 800, quantity: 2 },
+            { name: "Keyboard", price: 1500, quantity: 1 },
+            { name: "Headphones", price: 2000, quantity: 1 }
+        ];
+
+        // Step 2: Generate invoice lines using map()
+        const invoiceLines = cartItems.map(item => {
+            const itemTotal = item.price * item.quantity;
+            return `${item.name} | ₹${item.price} x ${item.quantity} = ₹${itemTotal}`;
+        });
+
+        // Step 3: Calculate grand total
+        const grandTotal = calculateTotal(cartItems);
+
+        // Step 4: Display formatted invoice
+        console.log(`
+========= SHOPPING CART INVOICE =========
+${invoiceLines.join('\n')}
+=============================================
+Grand Total: ₹${grandTotal}
+=============================================
+        `);
+
+    </script>
+
+</body>
+</html>

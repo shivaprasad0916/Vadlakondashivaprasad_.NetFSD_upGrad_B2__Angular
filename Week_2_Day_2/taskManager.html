@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager - Async Evolution</title>
+</head>
+<body>
+    <h2>Open Console to See Task Manager Output</h2>
+    <script type="module">
+
+/* STEP 1: BASIC STORAGE (Simulated Database) */
+let tasks = []; // Task storage
+
+/* STEP 2: CALLBACK-BASED ASYNC VERSION */
+const addTaskCallback = (task, callback) => {
+    setTimeout(() => {
+        tasks.push(task);
+        callback(`Task "${task}" added successfully.`);
+    }, 1000);
+};
+const deleteTaskCallback = (task, callback) => {
+    setTimeout(() => {
+        tasks = tasks.filter(t => t !== task);
+        callback(`Task "${task}" deleted successfully.`);
+    }, 1000);
+};
+const listTasksCallback = (callback) => {
+    setTimeout(() => {
+        callback(`
+========== TASK LIST ==========
+${tasks.length ? tasks.join('\n') : "No tasks available"}
+===============================
+        `);
+    }, 1000);
+};
+
+/* STEP 3: PROMISE-BASED VERSION */
+const addTaskPromise = (task) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            tasks.push(task);
+            resolve(`Task "${task}" added successfully.`);
+        }, 1000);
+    });
+};
+const deleteTaskPromise = (task) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            tasks = tasks.filter(t => t !== task);
+            resolve(`Task "${task}" deleted successfully.`);
+        }, 1000);
+    });
+};
+const listTasksPromise = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(`
+========== TASK LIST ==========
+${tasks.length ? tasks.join('\n') : "No tasks available"}
+===============================
+            `);
+        }, 1000);
+    });
+};
+
+/* STEP 4: ASYNC/AWAIT VERSION (Modern Way) */
+const runAsyncTaskManager = async () => {
+    try {
+        console.log(await addTaskPromise("Learn JavaScript"));
+        console.log(await addTaskPromise("Build Projects"));
+        console.log(await listTasksPromise());
+        console.log(await deleteTaskPromise("Learn JavaScript"));
+        console.log(await listTasksPromise());
+    } catch (error) {
+        console.error("Error:", error.message);
+    }
+};
+
+/*DEMONSTRATION FLOW */
+console.log("------ CALLBACK VERSION ------");
+addTaskCallback("Task A", (msg) => {
+    console.log(msg);
+    listTasksCallback(console.log);
+});
+setTimeout(() => {
+    console.log("\n------ PROMISE VERSION ------");
+    addTaskPromise("Task B")
+        .then(console.log)
+        .then(() => listTasksPromise())
+        .then(console.log);
+}, 3000);
+setTimeout(() => {
+    console.log("\n------ ASYNC/AWAIT VERSION ------");
+    runAsyncTaskManager();
+}, 6000);
+    </script>
+</body>
+</html>
