@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Theme Toggle App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 100px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .light-mode {
+            background-color: #ffffff;
+            color: #222222;
+        }
+        .dark-mode {
+            background-color: #1e1e1e;
+            color: #f5f5f5;
+        }
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Blog Website</h1>
+    <p>Welcome to my blog. You can switch between Light and Dark themes.</p>
+    <button id="themeToggleBtn">Switch Theme</button>
+    <script>
+        // Select elements
+        const toggleBtn = document.getElementById("themeToggleBtn");
+        const body = document.body;
+
+        // Function to apply theme
+        function applyTheme(theme) {
+            if (theme === "dark") {
+                body.classList.remove("light-mode");
+                body.classList.add("dark-mode");
+            } else {
+                body.classList.remove("dark-mode");
+                body.classList.add("light-mode");
+            }
+        }
+
+        // Load saved theme from localStorage
+        const savedTheme = localStorage.getItem("theme") || "light";
+        applyTheme(savedTheme);
+
+        // Add event listener
+        toggleBtn.addEventListener("click", function () {
+            let currentTheme = body.classList.contains("dark-mode") ? "dark" : "light";
+            let newTheme = currentTheme === "dark" ? "light" : "dark";
+
+            applyTheme(newTheme);
+
+            // Save preference in localStorage
+            localStorage.setItem("theme", newTheme);
+        });
+    </script>
+</body>
+</html>
