@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ Toggle Section</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 40px;
+        }
+
+        .faq-container {
+            width: 600px;
+            margin: auto;
+        }
+
+        .faq-item {
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .question {
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            cursor: pointer;
+        }
+
+        .answer {
+            display: none;
+            padding: 12px;
+            background-color: #ffffff;
+        }
+
+        .active {
+            background-color: #28a745 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <div class="question">1. What is jQuery?</div>
+        <div class="answer">jQuery is a lightweight, "write less, do more", JavaScript library.
+
+The purpose of jQuery is to make it much easier to use JavaScript on your website.
+
+jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.
+
+jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.</div>
+    </div>
+    <div class="faq-item">
+        <div class="question">2. Why use jQuery?</div>
+        <div class="answer">jQuery is a fast, feature-rich, and lightweight JavaScript library. The main purpose of using jQuery is to make it much easier to use JavaScript on your modern and smart website. It is highly recommended to have a basic knowledge of HTML, CSS, and JavaScript. </div>
+    </div>
+    <div class="faq-item">
+        <div class="question">3. What is slideToggle()?</div>
+        <div class="answer">slideToggle() smoothly shows or hides elements with sliding animation.</div>
+    </div>
+    <div class="faq-item">
+        <div class="question">4. How does click() work?</div>
+        <div class="answer">click() attaches a click event handler to the selected element.</div>
+    </div>
+    <div class="faq-item">
+        <div class="question">5. Can we manipulate CSS using jQuery?</div>
+        <div class="answer">Yes, we can add, remove, or toggle CSS classes using jQuery methods.</div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+
+        $(".question").click(function(){
+
+            // Remove active class from all questions
+            $(".question").removeClass("active");
+
+            // Add active class to clicked question
+            $(this).addClass("active");
+
+            // Toggle corresponding answer
+            $(this).next(".answer").slideToggle();
+
+        });
+
+    });
+</script>
+</body>
+</html>
