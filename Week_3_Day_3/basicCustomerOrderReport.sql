@@ -1,0 +1,12 @@
+
+use EcommAppDb
+
+--Basic Customer Order Report--
+SELECT c.first_name, c.last_name, o.order_id, o.order_date, o.order_status FROM customers c
+
+--join between customers and orders--
+INNER JOIN orders o
+	ON c.customer_id=o.customer_id
+WHERE o.order_status IN (1,4)
+ORDER BY o.order_date DESC;
+
