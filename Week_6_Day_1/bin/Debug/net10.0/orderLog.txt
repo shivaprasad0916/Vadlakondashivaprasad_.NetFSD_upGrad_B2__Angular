@@ -1,0 +1,32 @@
+STEP-1 Order Validation Started
+STEP-1 Order Validation Completed
+STEP-2 Order Payment Started
+STEP-2 Order Payment Completed
+STEP-3 Inventory Uptation Started
+STEP-3 Inventory Updation Completed
+STEP-4 Generation of Invoice Started
+STEP-4 Generation of Invoice Completed
+STEP-1 Order Validation Started
+STEP-1 Order Validation Completed
+STEP-2 Order Payment Started
+STEP-2 Order Payment Completed
+STEP-3 Inventory Uptation Started
+STEP-3 Inventory Updation Completed
+STEP-4 Generation of Invoice Started
+STEP-4 Generation of Invoice Completed
+STEP-1 Order Validation Started
+STEP-1 Order Validation Completed
+STEP-2 Order Payment Started
+STEP-2 Order Payment Completed
+STEP-3 Inventory Uptation Started
+STEP-3 Inventory Updation Completed
+STEP-4 Generation of Invoice Started
+STEP-4 Generation of Invoice Completed
+STEP-1 Order Validation Started
+STEP-1 Order Validation Completed
+STEP-2 Order Payment Started
+STEP-2 Order Payment Completed
+STEP-3 Inventory Uptation Started
+STEP-3 Inventory Updation Completed
+STEP-4 Generation of Invoice Started
+STEP-4 Generation of Invoice Completed
