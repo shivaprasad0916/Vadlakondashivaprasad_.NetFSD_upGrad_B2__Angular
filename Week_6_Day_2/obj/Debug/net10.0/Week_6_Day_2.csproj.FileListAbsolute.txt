@@ -1,0 +1,14 @@
+C:\Users\Charan\Music\shiva prasad\.NET_BY_UPGRAD\Week_6\Week_6_Day_2\Week_6_Day_2\obj\Debug\net10.0\Week_6_Day_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Charan\Music\shiva prasad\.NET_BY_UPGRAD\Week_6\Week_6_Day_2\Week_6_Day_2\obj\Debug\net10.0\Week_6_Day_2.AssemblyInfoInputs.cache
+C:\Users\Charan\Music\shiva prasad\.NET_BY_UPGRAD\Week_6\Week_6_Day_2\Week_6_Day_2\obj\Debug\net10.0\Week_6_Day_2.AssemblyInfo.cs
+C:\Users\Charan\Music\shiva prasad\.NET_BY_UPGRAD\Week_6\Week_6_Day_2\Week_6_Day_2\obj\Debug\net10.0\Week_6_Day_2.csproj.CoreCompileInputs.cache
+C:\Users\Charan\Music\shiva prasad\.NET_BY_UPGRAD\Week_6\Week_6_Day_2\Week_6_Day_2\bin\Debug\net10.0\Week_6_Day_2.exe
+C:\Users\Charan\Music\shiva prasad\.NET_BY_UPGRAD\Week_6\Week_6_Day_2\Week_6_Day_2\bin\Debug\net10.0\Week_6_Day_2.deps.json
+C:\Users\Charan\Music\shiva prasad\.NET_BY_UPGRAD\Week_6\Week_6_Day_2\Week_6_Day_2\bin\Debug\net10.0\Week_6_Day_2.runtimeconfig.json
+C:\Users\Charan\Music\shiva prasad\.NET_BY_UPGRAD\Week_6\Week_6_Day_2\Week_6_Day_2\bin\Debug\net10.0\Week_6_Day_2.dll
+C:\Users\Charan\Music\shiva prasad\.NET_BY_UPGRAD\Week_6\Week_6_Day_2\Week_6_Day_2\bin\Debug\net10.0\Week_6_Day_2.pdb
+C:\Users\Charan\Music\shiva prasad\.NET_BY_UPGRAD\Week_6\Week_6_Day_2\Week_6_Day_2\obj\Debug\net10.0\Week_6_Day_2.dll
+C:\Users\Charan\Music\shiva prasad\.NET_BY_UPGRAD\Week_6\Week_6_Day_2\Week_6_Day_2\obj\Debug\net10.0\refint\Week_6_Day_2.dll
+C:\Users\Charan\Music\shiva prasad\.NET_BY_UPGRAD\Week_6\Week_6_Day_2\Week_6_Day_2\obj\Debug\net10.0\Week_6_Day_2.pdb
+C:\Users\Charan\Music\shiva prasad\.NET_BY_UPGRAD\Week_6\Week_6_Day_2\Week_6_Day_2\obj\Debug\net10.0\Week_6_Day_2.genruntimeconfig.cache
+C:\Users\Charan\Music\shiva prasad\.NET_BY_UPGRAD\Week_6\Week_6_Day_2\Week_6_Day_2\obj\Debug\net10.0\ref\Week_6_Day_2.dll
