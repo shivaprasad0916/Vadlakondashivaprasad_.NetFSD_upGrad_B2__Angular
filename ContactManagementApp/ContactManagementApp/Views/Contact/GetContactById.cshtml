@@ -1,0 +1,35 @@
+﻿@model ContactApp.Models.ContactInfo
+
+@{
+    ViewBag.Title = "Contact Details";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Details</title>
+</head>
+<body>
+    <h1> Contact Details</h1>
+
+    @if (Model == null)
+    {
+        <p class="error">@ViewBag.Message</p>
+    }
+    else
+    {
+        <div class="card">
+            <div class="field"><span class="label">Contact ID:</span><span class="value">@Model.ContactId</span></div>
+            <div class="field"><span class="label">First Name:</span><span class="value">@Model.FirstName</span></div>
+            <div class="field"><span class="label">Last Name:</span><span class="value">@Model.LastName</span></div>
+            <div class="field"><span class="label">Company:</span><span class="value">@Model.CompanyName</span></div>
+            <div class="field"><span class="label">Email:</span><span class="value">@Model.EmailId</span></div>
+            <div class="field"><span class="label">Mobile No:</span><span class="value">@Model.MobileNo</span></div>
+            <div class="field"><span class="label">Designation:</span><span class="value">@Model.Designation</span></div>
+        </div>
+    }
+
+    <a class="btn" href="/">← Back to All Contacts</a>
+</body>
+</html>
+

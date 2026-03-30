@@ -1,0 +1,46 @@
+﻿@model ContactApp.Models.ContactInfo
+
+@{
+    ViewBag.Title = "Add Contact";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Contact</title>
+</head>
+<body>
+    <h1> Add New Contact</h1>
+    <div class="form-card">
+        <form method="post" action="/Contact/AddContact">
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" name="FirstName" placeholder="Enter first name"/>
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" name="LastName" placeholder="Enter last name"/>
+            </div>
+            <div class="form-group">
+                <label>Company Name</label>
+                <input type="text" name="CompanyName" placeholder="Enter company name" />
+            </div>
+            <div class="form-group">
+                <label>Email ID</label>
+                <input type="email" name="EmailId" placeholder="Enter email address"/>
+            </div>
+            <div class="form-group">
+                <label>Mobile No</label>
+                <input type="number" name="MobileNo" placeholder="Enter mobile number"/>
+            </div>
+            <div class="form-group">
+                <label>Designation</label>
+                <input type="text" name="Designation" placeholder="Enter designation" />
+            </div>
+            <button type="submit" class="btn-submit">💾 Save Contact</button>
+            <a class="btn-back" href="/">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>
+
