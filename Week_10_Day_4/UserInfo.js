@@ -1,0 +1,17 @@
+"use strict";
+const userName = "John";
+let age = 25;
+const email = "john@example.com";
+const isSubscribed = true;
+let userAge = age;
+let userEmail = email;
+const message = `Hello ${userName}, you are ${age} years old and your email is ${email}.`;
+console.log(message);
+age = age + 1;
+const isEligibleForPremium = age > 18 && isSubscribed;
+console.log("User Name:", userName);
+console.log("Age after increment:", age);
+console.log("Email:", email);
+console.log("Subscribed:", isSubscribed);
+console.log("Message:", message);
+console.log("Premium Eligible:", isEligibleForPremium);
